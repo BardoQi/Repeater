@@ -1,0 +1,3 @@
+include ':char_library',  'material_setting', 'showcase'
+include ':repeater'
+project(':char_library').projectDir = new File('library')

@@ -1,0 +1,124 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <fragment
+            android:id="@+id/titles"
+            class="com.weishang.repeater.ui.DesktopFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!-- 侧滑菜单内容 -->
+
+    <LinearLayout
+        android:id="@+id/drawer_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_default_profile_art">
+
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_profile_none" />
+
+            <TextView
+                android:id="@+id/tv_happy_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:paddingBottom="20dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="50dp"
+                android:text="开心每一天"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_user_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selector"
+            android:padding="12dp"
+            android:text="@string/record"
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_user_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selector"
+            android:padding="12dp"
+            android:text="@string/record_n"
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_play_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selector"
+            android:padding="12dp"
+            android:text="@string/collect"
+            android:textColor="@color/text_color"
+            android:textSize="18dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_user_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selector"
+            android:padding="12dp"
+            android:text="@string/remark"
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_user_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/item_selector"
+            android:padding="12dp"
+            android:text="@string/setting"
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <com.weishang.repeater.widget.FixedGridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            auto:fg_cellwidth="40dp"
+            auto:fg_cellheight="40dp"
+            auto:fg_padding="4dp"/>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>  

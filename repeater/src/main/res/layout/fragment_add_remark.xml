@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <com.weishang.repeater.widget.DivideLinearLayout
+        android:id="@+id/ll_remark_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        auto:divier_padding="12dp"
+        auto:divier_gravity="bottom"
+        auto:divier_width="2dp"
+        android:layout_below="@+id/toolbar"
+        auto:divier_color="@color/line">
+
+        <EditText
+            android:id="@+id/et_remark_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/title"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:textColor="@color/dark_gray"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_previous_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/iv_next_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:scaleType="fitCenter" />
+
+    </com.weishang.repeater.widget.DivideLinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom_panel"
+        android:layout_below="@id/ll_remark_title"
+        android:padding="12dp">
+
+        <EditText
+            android:id="@+id/et_content_editor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/remark_content_hint"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_mod_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <com.weishang.repeater.widget.DivideLinearLayout
+        android:id="@+id/ll_option_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        auto:item_divier_color="@color/line"
+        auto:item_divier_padding="8dp">
+
+        <View
+            android:id="@+id/view_block"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/ll_option_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_chararter_dec"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_title_chararter_dec" />
+
+                <com.weishang.repeater.widget.MusicProgressBar
+                    android:id="@+id/mp_font_size"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    auto:mb_color="@color/line"
+                    auto:mb_max="15"
+                    auto:mb_rate_color="@color/yellow" />
+
+                <ImageView
+                    android:id="@+id/iv_chararter_inc"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_title_chararter_inc" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_divier2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/line"/>
+
+        <com.weishang.repeater.widget.RadioGridLayout
+            android:id="@+id/rl_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            auto:fg_cellheight="50dp"
+            auto:fg_cellwidth="50dp"
+            android:layout_marginBottom="8dp"
+            auto:rl_mode="single_choose"
+            auto:fg_padding="8dp"
+            auto:rl_raw="5" />
+    </com.weishang.repeater.widget.DivideLinearLayout>
+
+    <com.weishang.repeater.widget.ImageViewFlat
+        android:id="@+id/iv_add_remark"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dp"
+        android:padding="12dp"
+        android:src="@drawable/ic_music_add"
+        auto:flat_backgroud="@color/white"
+        auto:flat_type="circle" />
+
+    <com.weishang.repeater.widget.ImageViewFlat
+        android:id="@+id/iv_remark_set"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_above="@id/iv_add_remark"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:padding="6dp"
+        android:src="@drawable/ic_sidebar_setting"
+        auto:flat_backgroud="@color/white"
+        auto:flat_type="circle" />
+
+</RelativeLayout>

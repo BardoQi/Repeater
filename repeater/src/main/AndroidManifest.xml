@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.weishang.repeater"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".App"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.weishang.repeater.MainActivity"
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.weishang.repeater.PlayActivity"
+            android:theme="@style/PlayTheme" />
+
+        <activity android:name=".MoreActivity" />
+        <activity android:name=".SettingActivity"
+            android:theme="@style/Yellow_MaterialSettingsTheme"/>
+
+        <service
+            android:name=".service.PlayService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.weishang.repeater.service.PlayService" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.weishang.repeater.provider.DateProvider"
+            android:authorities="com.weishang.repeater"
+            android:exported="false" />
+
+        <meta-data
+            android:name="IS_DUBUG"
+            android:value="true"></meta-data>
+    </application>
+
+</manifest>

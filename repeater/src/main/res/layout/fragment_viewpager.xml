@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+
+        <!--<com.weishang.repeater.widget.PagerStrip
+            android:id="@+id/ps_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            auto:pagerstrip_indicator="@color/dark_yellow"
+            auto:pagerstrip_scale="0.2"
+            auto:pagerstrip_text_color="@color/white"
+            auto:pagerstrip_text_selected="@color/dark_yellow"
+            auto:pagerstrip_underline_color="@color/yellow" />-->
+
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:clickable="true" />
+</LinearLayout>

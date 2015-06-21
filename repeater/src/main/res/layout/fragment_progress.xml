@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true" >
+
+    <com.weishang.repeater.widget.TitleBar
+        android:id="@id/titlebar_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height"
+        android:visibility="gone"
+        app:titlebar_bg="@color/transparent"
+        app:titlebar_display_home="false"
+        app:titlebar_page_title_visible="true"
+        app:titlebar_line_color="@color/yellow"
+        app:titlebar_line_height="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/progress_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.weishang.repeater.widget.WheelView
+            android:id="@+id/progress"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:layout_gravity="center"
+            app:wv_text_mode="empty_text"/>
+
+        <TextView
+            android:id="@+id/load_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/loading"
+            android:textColor="@color/text_color"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/empty_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:drawablePadding="5dip"
+        android:drawableTop="@drawable/no_data"
+        android:gravity="center"
+        android:text="@string/no_item"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/error_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/no_data"
+        android:gravity="center"
+        android:text="@string/no_network"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/repeat_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_repeat_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/details_wifi_icon" />
+
+        <TextView
+            android:id="@+id/tv_repeat_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:text="@string/network_load_error"
+            android:textColor="@color/text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_try"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/load_repeat_try_selector"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="5dip"
+            android:text="@string/pull_to_refresh_try"
+            android:textColor="@color/text_color"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

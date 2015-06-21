@@ -1,0 +1,62 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv_scan_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/ll_scan_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="@string/auto_scaning"
+                android:background="@drawable/circle_btn_selector"
+                android:id="@+id/tv_scan_info" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/scan_rotate"
+                android:layout_centerInParent="true"
+                android:id="@+id/iv_scan_rate" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_auto_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/auto_scaning"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:id="@+id/view_divier" />
+    </LinearLayout>
+</ScrollView>

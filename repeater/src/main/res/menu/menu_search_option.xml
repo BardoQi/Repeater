@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/action_play_music"
+        android:orderInCategory="80"
+        android:title="@string/play_music"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_add_music"
+        android:orderInCategory="80"
+        android:title="@string/favorite"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="80"
+        android:title="@string/search"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        app:showAsAction="always" />
+
+</menu>

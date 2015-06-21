@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="title_bg">#FFF47328</color>
+    <color name="light_gray">#efefef</color>
+    <color name="blue">#FF12A75C</color>
+    <color name="dark_gray">#3d454c</color>
+    <color name="dark_gray_pressed">#373e44</color>
+    <color name="darker_gray">#1f2226</color>
+    <color name="line">#BBAAAAAA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#5F6164</color>
+    <color name="red">#FFE63B53</color>
+    <color name="yellow">#FFF47328</color>
+    <color name="dark_yellow">#FFF4974F</color>
+
+    <color name="update_flag_red">#FFFC494A</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue_press">#FF44C972</color>
+    <color name="dark_blue">#BB44C972</color>
+    <color name="background_tab">#ff1da76e</color>
+    <color name="circle_scan_outer">#FFE3F7D5</color>
+    <color name="menu_item_bg">#ff2da765</color>
+    <color name="menu_item_overflow">#FF12A75C</color>
+    <color name="v_line">#ff1da76e</color>
+    <color name="h_line">#ff26a76d</color>
+    <color name="text_color">#FF373e44</color>
+    <color name="cover_color">#FFECEDED</color>
+
+    <color name="a_dark_gray">#BB232426</color>
+
+    <color name="normal_day">@color/white</color>
+    <color name="selected_day_background">@color/yellow</color>
+    <color name="selected_day_text">#FFF2F2F2</color>
+    <color name="white_blur">#22FFFFFF</color>
+
+    <color name="axis">#ffffff</color>
+    <color name="label">#ffffff</color>
+
+    <color name="bar_highest">#ffffff</color>
+    <color name="bar_fill1">#fed4c2</color>
+    <color name="bar_fill2">#ffc2a9</color>
+    <color name="horbar_fill">#cddc39</color>
+</resources>

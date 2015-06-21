@@ -1,0 +1,70 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/Activity.Holo</item>
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">@color/title_bg</item>
+        <!-- 状态栏颜色 -->
+        <!--<item name="colorPrimaryDark">@color/dark_blue</item>-->
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="PlayTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="queryBackground">@color/dark_yellow</item>
+        <item name="submitBackground">@color/dark_yellow</item>
+        <!--<item name="closeIcon">...</item>
+        <item name="searchIcon">...</item>
+        <item name="goIcon">...</item>
+        <item name="voiceIcon">...</item>
+        <item name="commitIcon">...</item>
+        <item name="suggestionRowLayout">...</item>-->
+    </style>
+
+    <style name="Activity.Holo" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/pop_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_not_change</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_not_change</item>
+        <item name="android:activityCloseExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/open_next</item>
+        <item name="android:activityOpenExitAnimation">@anim/close_main</item>
+        <item name="android:activityCloseEnterAnimation">@anim/open_main</item>
+        <item name="android:activityCloseExitAnimation">@anim/close_next</item>
+    </style>
+
+    <style name="Yellow_MaterialSettingsTheme" parent="MaterialSettingsTheme">
+        <item name="msColorAccent">@color/yellow</item>
+        <item name="msColorHeader">@color/yellow</item>
+    </style>
+
+    <style name="BlurDialogFragment.Default.Animation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/default_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/default_dialog_out</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
+        <item name="sv_backgroundColor">#33F47328</item>
+        <item name="sv_showcaseColor">@color/dark_yellow</item>
+        <item name="sv_buttonText">Hide</item>
+        <item name="sv_tintButtonColor">false</item>
+        <item name="sv_titleTextAppearance">@style/CustomTitle</item>
+    </style>
+
+    <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
+        <item name="android:textColor">#33B5E5</item>
+    </style>
+
+</resources>

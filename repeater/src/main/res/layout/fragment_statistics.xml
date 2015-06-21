@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.weishang.repeater.ui.StatisticsFragment"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.db.chart.view.BarChartView
+                android:id="@+id/barchart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="2dp"
+                android:background="#F67743"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:layout_below="@+id/mv_view"
+                auto:chart_axisBorderSpacing="25dp"
+                auto:chart_axisColor="@color/axis"
+                auto:chart_labelColor="@color/label" />
+
+            <com.db.chart.view.HorizontalBarChartView
+                android:id="@+id/horbarchart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="2dp"
+                android:background="#9e9d24"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/barchart"
+                android:paddingTop="10dp"
+                auto:chart_axisBorderSpacing="25dp"
+                auto:chart_axisColor="@color/axis"
+                auto:chart_labelColor="@color/label" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

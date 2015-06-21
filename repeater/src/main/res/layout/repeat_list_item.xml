@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto">
+
+    <com.weishang.repeater.widget.FlatView
+        android:id="@+id/fv_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/cover_shape"
+        auto:flat_type="retangle"
+        auto:flat_click="delay_click"
+        auto:flat_backgroud="@color/cover_color">
+
+        <ImageView
+            android:id="@+id/iv_music_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" />
+
+        <com.weishang.repeater.widget.WheelView
+            android:id="@+id/wv_wheel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            auto:wv_outcontour_width="1dp"
+            android:visibility="gone" />
+
+        <com.weishang.repeater.widget.MusicImageView
+            android:id="@+id/iv_play_list"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/yellow_oval"
+            android:layout_margin="8dp"
+            auto:mv_padding="6dp"
+            auto:mv_corner_padding="1dp"
+            auto:flat_type="circle"
+            auto:mv_color="@color/white"
+            auto:flat_backgroud="@color/yellow" />
+
+        <com.weishang.repeater.widget.ImageViewFlat
+            android:id="@+id/iv_repeat_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/yellow_oval"
+            android:src="@drawable/ktv_zone_opus_item_delete"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            auto:mv_padding="6dp"
+            auto:mv_corner_padding="1dp"
+            auto:flat_type="circle"
+            auto:mv_color="@color/white"
+            auto:flat_backgroud="@color/yellow" />
+    </com.weishang.repeater.widget.FlatView>
+
+    <TextView
+        android:id="@+id/tv_list_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_list_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

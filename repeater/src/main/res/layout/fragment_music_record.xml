@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weishang.repeater.widget.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sp_panel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:gravity="bottom"
+    auto:dragView="@+id/view_handle"
+    auto:offsetHeight="100dp"
+    auto:overlay="true"
+    auto:panelHeight="100dp"
+    auto:shadowHeight="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.weishang.repeater.widget.calendar.SimpleMonthView
+                android:id="@+id/mv_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                auto:dv_check_mode="click_mode"
+                auto:enable_select="true"
+                />
+
+
+            <include layout="@layout/toolbar"/>
+
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/view_handle"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/title_bg">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="@color/yellow" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/view_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+    </LinearLayout>
+</com.weishang.repeater.widget.SlidingUpPanelLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.weishang.repeater.widget.LinearLayoutFlat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_container"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    auto:flat_color="@color/light_gray">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/cover_shape"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textColor="@color/text_color" />
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:button="@drawable/btn_checked_selector"
+        android:layout_gravity="center_vertical" />
+
+</com.weishang.repeater.widget.LinearLayoutFlat>

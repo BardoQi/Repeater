@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_music_flag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/music_bg">
+
+            <TextView
+                android:id="@+id/tv_music_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/abc_action_bar_default_height"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/dark_gray"
+                android:text="Boom Boom Pow(Clean)" />
+
+            <ImageView
+                android:id="@+id/iv_image_flag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/music_flag"
+                android:layout_below="@+id/tv_music_name" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_music_name" />
+
+            <com.weishang.repeater.widget.WaveView
+                android:id="@+id/wv_wave"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                auto:wave_alpha="0x44"
+                auto:wave_color="@color/dark_gray"
+                auto:wave_count="3"
+                auto:wave_height="20dp"
+                auto:wave_speed="0.03" />
+
+            <TextView
+                android:id="@+id/tv_is_start"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"
+                android:drawableTop="@drawable/widget_toast_smile"
+                android:background="@drawable/yellow_oval"
+                android:gravity="center"
+                android:paddingTop="14dp"
+                android:text="@string/is_start"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_is_end"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:drawableTop="@drawable/widget_toast_smile"
+                android:background="@drawable/yellow_oval"
+                android:gravity="center"
+                android:paddingTop="14dp"
+                android:text="@string/is_end"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_music_mode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/abc_action_bar_default_height"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:background="@color/white"
+                android:paddingRight="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_play_mode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/repeat_level_drawable" />
+
+                <ImageView
+                    android:id="@+id/iv_music_timer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_music_add" />
+
+                <ImageView
+                    android:id="@+id/iv_music_add"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_music_add" />
+
+                <ImageView
+                    android:id="@+id/iv_music_favorite"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/favorite_selector" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_rate_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_music_option"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_play_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/init_play_time"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="12sp" />
+
+                <com.weishang.repeater.widget.MusicProgressBar
+                    android:id="@+id/sliderNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_play_time"
+                    android:layout_toLeftOf="@+id/tv_music_time"
+                    auto:mb_color="@color/dark_gray"
+                    auto:mb_rate_color="@color/yellow"
+                    auto:mb_rate_textsize="10sp"
+                    auto:mb_choose_color="@color/dark_yellow" />
+
+                <TextView
+                    android:id="@+id/tv_music_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_color"
+                    android:text="00:40" />
+
+                <com.weishang.repeater.widget.FlatView
+                    android:id="@+id/iv_add_layout"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    auto:flat_type="circle"
+                    auto:flat_backgroud="@color/dark_gray"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    auto:flat_padding="0.5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_add_repeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_music_add"
+                        android:scaleType="fitCenter"
+                        android:padding="8dp" />
+                </com.weishang.repeater.widget.FlatView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_music_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.weishang.repeater.widget.ImageViewFlat
+                    android:id="@+id/iv_music_rw"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/blue_oval_selector"
+                    android:scaleType="center"
+                    android:src="@drawable/status_rw"
+                    auto:flat_type="circle"
+                    auto:flat_backgroud="@color/dark_gray" />
+
+                <com.weishang.repeater.widget.MusicImageView
+                    android:id="@+id/iv_music_play"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/blue_oval_selector"
+                    android:scaleType="center"
+                    auto:flat_type="circle"
+                    auto:mv_padding="16dp"
+                    auto:mv_corner_radius="4dp"
+                    auto:mv_center_padding="4dp"
+                    auto:mv_color="@color/light_gray"
+                    auto:flat_backgroud="@color/dark_gray" />
+
+                <com.weishang.repeater.widget.ImageViewFlat
+                    android:id="@+id/iv_music_ff"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/blue_oval_selector"
+                    android:scaleType="center"
+                    android:src="@drawable/status_ff"
+                    auto:flat_type="circle"
+                    auto:flat_backgroud="@color/dark_gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

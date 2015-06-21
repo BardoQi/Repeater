@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">芳芳复读机</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置选项</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="local_res">本地资料</string>
+    <string name="auto_scaning">自动扫描中</string>
+    <string name="total_file">文件总数(%s)</string>
+    <string name="scan_complate">扫描完毕</string>
+    <string name="no_file">当前目录没有文件</string>
+    <string name="init_play_time">00:00</string>
+    <string name="my_favorite">我的收藏</string>
+    <string name="my_used">最近播放</string>
+    <string name="no_play_file">还没有播放过文件</string>
+    <string name="loading">加载中...</string>
+    <string name="no_item">很抱歉,当前没有数据~</string>
+    <string name="no_list">点击添加列表~</string>
+    <string name="no_play">最近还没有播放过呃~</string>
+    <string name="no_network">当前没有网络~</string>
+    <string name="network_load_error">网络加载失败~</string>
+    <string name="pull_to_refresh_try">重试</string>
+    <string name="no_favorite">您还没有收藏音频文件哦~</string>
+    <string name="setting">设置</string>
+    <string name="collect_success">收藏音乐成功~</string>
+    <string name="collect_cancel">取消收藏音乐~</string>
+
+    <string name="repeat_count">记录 %s</string>
+    <string name="repeat_start_time">起 %s</string>
+    <string name="repeat_end_time">止 %s</string>
+    <string name="local_file">本地文件</string>
+    <string name="create_list">新建列表</string>
+    <string name="my_list">我的列表</string>
+    <string name="file_count">%s 个文件</string>
+    <string name="zero_file">0个文件</string>
+    <string name="new_files">最新添加</string>
+    <string name="recently_play">最近播放</string>
+    <string name="list_name_hint">请输入列表名称~</string>
+    <string name="simple_list_name">列表%s</string>
+    <string name="list_text_count">%s/32</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="list_already_exists">列表已经存在哦~</string>
+    <string name="add_music">添加歌曲</string>
+    <string name="complete">完成</string>
+    <string name="add_complate">添加完成</string>
+    <string name="add_list_fail">添加失败,失效的列表</string>
+    <string name="search_music_hint">请输入搜索音乐名称,作者</string>
+    <string name="is_start">到头啦</string>
+    <string name="is_end">到尾啦</string>
+    <string name="all">All</string>
+    <string name="add_list">添加歌曲到</string>
+    <string name="repeat_time_same">间隔太短~</string>
+
+    <string name="sans_serif" translatable="false">sans-serif</string>
+
+    <string name="use_collect">使用统计</string>
+    <string name="search">搜索</string>
+    <string name="collect">统计</string>
+    <string name="remark">备忘</string>
+    <string name="record">录音</string>
+    <string name="record_n">记录</string>
+    <string name="month_format">MM月dd日</string>
+    <string name="year_format">yyyy年MM月dd日</string>
+    <string name="all_remark">全部备忘</string>
+    <string name="no_remark">您还没有开始记录备忘~</string>
+    <string name="title">标题</string>
+    <string name="remark_content_hint">请输入备注内容</string>
+    <string name="last_mod_time">最后修改时间:%s</string>
+    <string name="record_time">起:%1$s&#160;&#160;&#160;&#160;始:%2$s</string>
+    <string name="record_list">录音列表</string>
+    <string name="file_not_exists">文件不存在</string>
+    <string name="play_record">播放记录</string>
+    <string name="play_time_value">播放时长:%1$s</string>
+
+    <string name="format_month">MM月dd日</string>
+    <string name="play_record_count">%1$s (%2$s)条播放记录</string>
+    <string name="play_no_record">%1$s 无播放记录</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="common_setting">常用設置</string>
+    <string name="alert">提示语</string>
+    <string name="happy_every_day">开心每一天</string>
+    <string name="set_alert">设置提示语</string>
+    <string name="update_app">版本升级</string>
+    <string name="app_version">当前版本:%s</string>
+    <string name="double_click_exit">双击退出</string>
+    <string name="empty_info">信息不能为空</string>
+    <string name="music_search">音乐搜索</string>
+    <string name="favorite">收藏</string>
+    <string name="play_music">播放音乐</string>
+    <string name="add_to_list">添加音乐到</string>
+    <string name="more">更多</string>
+    <string name="click_to_exit">再点一次退出应用</string>
+    <string name="add_remark">添加备忘</string>
+    <string name="delete_list">确认删除该列表?</string>
+    <string name="delete_list_info">删除列表将会删除所属列表音乐数据,录音及复读记录属于公共数据,并不会被删除.</string>
+    <string name="favorite_delete_info">我的最爱列表不能删除</string>
+    <string name="next">下一步</string>
+    <string name="guide_info1">这里会有您所有的音乐.您可以直接查看</string>
+    <string name="guide_info2">这里可以放您最喜爱的曲目</string>
+    <string name="guide_info3">点击,可以添加自定义列表</string>
+    <string name="guide_info4">好了,您已经了解了一些基本的使用.开始使用吧</string>
+
+</resources>
